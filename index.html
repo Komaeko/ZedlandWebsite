@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head><!-- Head -->
+	<meta charset="utf-8">
+	<title>Accommodation</title>
+	<link href="images/zedlandsmall.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/zedland-custom.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />	
+	<link rel="stylesheet" href="styles/jquery.mobile-1.4.2.min.css"><!-- Links to CDN for scripts and CSS -->
+	<link rel="stylesheet" href="styles/jquery.mobile.min.css"/>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/accommodationmap.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/swipepage.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="scripts/accommodationmap.js"></script><!-- Links to scripts -->
+	<script src="scripts/addaccommodation.js"></script>
+	<script src="scripts/getaccommodation.js"></script>
+	<script src="scripts/share.js"></script>
+	<script src="scripts/createaccommodationlist.js"></script> 
+	<script src="scripts/showaccommodation.js"></script>
+	<script src="scripts/swipeevent.js"></script>
+</head>
+<body><!-- Body  -->
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<a href="index.html" data-icon="home">Home</a><!-- Back to Home Page -->
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+				<h2>Search</h2>
+				<div class="ui-grid-solo">
+					<div class="ui-block-a">
+						<a href="#typepopup" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">Halls</a>
+					</div>
+				</div>
+				<div data-role="popup" id="typepopup" data-inset="true">
+					<ul data-role="listview"><!-- Listview with popup menu -->
+						<li><a href="#five" data-transition="slidefade" data-prefetch>Private Rooms</a></li><!-- Links to internal pages -->
+						<li><a href="#four" data-transition="slidefade" data-prefetch>Ensuite Shared Rooms</a></li>
+						<li><a href="#three" data-transition="slidefade" data-prefetch>Standard Shared Rooms</a></li>
+					</ul>
+				</div>
+					<div class="ui-grid-solo"><!-- Grid layout to make site responsive on different resolutions and orientations -->
+						<div class="ui-block-a">
+							<a href="#roompopup" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">Spare Rooms</a>
+						</div>
+					</div>
+					<div data-role="popup" id="roompopup" data-inset="true">
+						<ul data-role="listview"><!-- Listview with popup menu -->
+							<li><a href="#two" data-transition="slidefade" data-prefetch>Sharing 4 People</a></li>
+							<li><a href="#one" data-transition="slidefade" data-prefetch>Sharing 6 People</a></li>
+						</ul>
+					</div>
+					<div class="ui-grid-b ui-responsive">
+						<div class="ui-block-a">
+							<a href="#locationpopup" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-icon-star ui-btn-icon-left">Locations</a>
+						</div>
+						<div class="ui-block-a" data-role="popup" id="locationpopup" data-inset="true">
+							<ul data-role="listview"><!-- Listview with popup menu -->
+								<li><a href="#130aWeek" data-transition="slidefade" data-prefetch>On Campus</a></li>
+								<li><a href="#110aWeek" data-transition="slidefade" data-prefetch>City Centre</a></li>
+								<li><a href="#90aWeek" data-transition="slidefade" data-prefetch>Suburbs</a></li>
+							</ul>
+						</div>
+						<div class="ui-block-b">
+							<a href="#pricepopup" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-icon-star ui-btn-icon-left">Price</a>
+						</div>
+						<div class="ui-block-b" data-role="popup" id="pricepopup" data-inset="true">
+							<ul data-role="listview"><!-- Listview with popup menu -->
+								<li><a href="#130aWeek" data-transition="slidefade" data-prefetch>£130 a Week</a></li>
+								<li><a href="#110aWeek" data-transition="slidefade" data-prefetch>£110 a Week</a></li>
+								<li><a href="#90aWeek" data-transition="slidefade" data-prefetch>£90 a Week</a></li>
+							</ul>
+						</div>
+						<div class="ui-block-c">
+								<a href="myaccommodation.html" data-transition="slidefade" class="ui-btn ui-corner-all ui-shadow ui-icon-star ui-btn-icon-left">Favourites</a>
+						</div>
+					</div>
+				</div>
+			<div>
+			<a href="#sharepopup" id="sharelinks" data-rel="popup"><!-- Share Links -->
+				<img src="images/facebook.png" id="facebook" class="shareimage" alt="Share on Facebook">
+				<img src="images/twitter.png" id="twitter" class="shareimage" alt="Share on Twitter">
+				<img src="images/linkedin.png" id="linkedin" class="shareimage" alt="Share on LinkedIn">
+			</a>
+			</div>
+			<div data-role="popup" id="sharepopup" data-theme="d" data-dismissible="false"  data-history="false" data-position-to="window">
+				<div data-role="header">
+					<h1>Share</h1>
+				</div>
+				<div data-role="content">
+					<a href="#" data-role="button" data-rel="back">Share to <span id="sharechannel"></span></a>
+					<a href="#" data-role="button" data-rel="back">Cancel</a>
+				</div>
+			</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+			<ul>
+				<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+				<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+				<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+			</ul>
+			</div>
+		</div> 
+	</div>
+	<div data-role="page" id="five"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="accommodationlist1" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="four"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="accommodationlist2" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="three"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="accommodationlist3" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="two"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="spareroomlist1" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="one"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="spareroomlist2" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="130aWeek"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="130list" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="110aWeek"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="110list" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="90aWeek"><!-- Internal Page -->
+		<div data-role="header">
+			<a href="#home" data-icon="home" data-iconpos="notext"></a>
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Matching Search</h2>
+			<ul id="90list" data-role="listview" data-inset="true" data-filter="true"></ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-prefetch data-icon="info">About</a></li>
+					<li><a href="contact.html" data-prefetch data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-prefetch data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

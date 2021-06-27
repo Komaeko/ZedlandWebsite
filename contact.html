@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head><!-- Head -->
+	<meta charset="utf-8">
+	<title>Accommodation</title>
+	<link href="images/zedlandsmall.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/zedland-custom.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />	
+	<link rel="stylesheet" href="styles/jquery.mobile-1.4.2.min.css"><!-- Links to CDN for scripts and CSS -->
+	<link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/accommodationmap.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="scripts/accommodationmap.js"></script><!-- Links to scripts -->
+	<script src="scripts/addaccommodation.js"></script>
+	<script src="scripts/getaccommodation.js"></script>
+	<script src="scripts/share.js"></script>
+	<script src="scripts/createaccommodationlist.js"></script> 
+	<script src="scripts/showaccommodation.js"></script>
+</head>
+<body><!-- Body  -->
+	<div data-role="page" id="contact">
+		<div data-role="header">
+			<a href="index.html" data-icon="home">Home</a><!-- Back to Home Page -->
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content" class="ui-content">
+			<h2>Contact</h2>
+				<a href="tel:+7810183041" class="ui-btn ui-icon-phone ui-btn-icon-bottom ui-corner-all">Call Us</a><!-- URI Link to Telephone App -->
+				<a href="sms://+7551876198" class="ui-btn ui-icon-mail ui-btn-icon-bottom ui-corner-all">SMS Us</a><!-- URI Link to Messaging App -->
+				<a href="mailto:zed@zedland.co.uk" class="ui-btn ui-icon-mail ui-btn-icon-bottom ui-corner-all">Email Us</a><!-- URI Link to Email App -->
+				<div data-role="collapsible-set" data-iconpos="bottom">
+				<div data-role="collapsible"><!-- Collapsible Text -->
+					<h3>Postal Address</h3>
+					<p>ZUAS,<br>
+					101 Brunel Building,<br>
+					Zedland University Main Campus,<br>
+					Capital City,<br>
+					Zedland,<br>
+					ZL7867H
+					</p>
+				</div>
+				</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-icon="info">About</a></li>
+					<li><a href="contact.html" data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</body>
+</html>

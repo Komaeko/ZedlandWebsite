@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head><!-- Head -->
+	<meta charset="utf-8">
+	<title>Accommodation</title>
+	<link href="images/zedlandsmall.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/zedland-custom.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />	
+	<link rel="stylesheet" href="styles/jquery.mobile-1.4.2.min.css"><!-- Links to CDN for scripts and CSS -->
+	<link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/accommodationmap.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="scripts/accommodationmap.js"></script><!-- Links to scripts -->
+	<script src="scripts/addaccommodation.js"></script>
+	<script src="scripts/getaccommodation.js"></script>
+	<script src="scripts/share.js"></script>
+	<script src="scripts/createaccommodationlist.js"></script> 
+	<script src="scripts/showaccommodation.js"></script>
+</head>
+<body><!-- Body  -->
+	<div data-role="page" id="booking">
+		<div data-role="header">
+			<a href="index.html" data-icon="home">Home</a><!-- Back to Home Page -->
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="content">
+			<h2>Register</h2>
+			<form action="registered.html" method="post" id="register"><!-- Registration Form -->
+				<div class="ui-field-contain">
+					<label for="number">Student Number</label>
+					<input type="number" name="number" id="number" value="" required/>
+				</div>
+				<div class="ui-field-contain">
+					<label for="firstName">First Name</label>
+					<input type="text" name="firstName" id="firstName" value="" required/>
+				</div>
+				<div class="ui-field-contain">
+					<label for="lastName">Last Name</label>
+					<input type="text" name="lastName" id="lastName" value="" required/>
+				</div>
+				<div class="ui-field-contain">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" value="" required/>
+				</div>
+                <div class="ui-field-contain">
+					<label for="subject">Programme</label>
+					<select id="subject" data-mini="true">
+						<option value="one">Art</option>
+						<option value="two">Business</option>
+						<option value="three">Computing</option>
+						<option value="four">Drama</option>
+                        <option value="five">Geography</option>
+                        <option value="six">History</option>
+                        <option value="seven">Languages</option>
+                        <option value="eight">Mathematics</option>
+                        <option value="nine">Psychology</option>
+                        <option value="ten">Science</option>
+					</select>
+				</div>
+				<div class="ui-field-contain">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			     	<legend>Accomodation Required</legend>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
+			         	<label for="radio-choice-c">House</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
+			         	<label for="radio-choice-d">Flat</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-e" value="other" />
+			         	<label for="radio-choice-e">Room</label>
+			    </fieldset>
+				</div>
+				<div class="ui-field-contain">
+					<label for="from">From:</label>
+					<input type="date" name="from" id="from" value="" required/><!-- Shows a warning on W3C Validator but no way around this with out including a polyfill -->
+				</div>
+				<div class="ui-field-contain">
+					<label for="to">To:</label>
+					<input type="date" name="to" id="to" value="" required/><!-- Shows a warning on W3C Validator but no way around this with out including a polyfill -->
+				</div>
+				<div class="ui-field-contain"> 
+					<input type="submit" class="ui-btn" value="Submit" data-mini="true">
+				</div>
+			</form> 
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-icon="info">About</a></li>
+					<li><a href="contact.html" data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Head -->
+	<meta charset="utf-8">
+	<title>Accommodation</title>
+	<link href="images/zedlandsmall.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/zedland-custom.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />	
+	<link rel="stylesheet" href="styles/jquery.mobile-1.4.2.min.css"><!-- Links to CDN for scripts and CSS -->
+	<link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/accommodationmap.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/swipepage.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="scripts/accommodationmap.js"></script><!-- Links to scripts -->
+	<script src="scripts/addaccommodation.js"></script>
+	<script src="scripts/getaccommodation.js"></script>
+	<script src="scripts/share.js"></script>
+	<script src="scripts/createaccommodationlist.js"></script> 
+	<script src="scripts/showaccommodation.js"></script>
+	<script src="scripts/swipeevent.js"></script>
+</head>
+<body><!-- Body  -->
+	<div data-role="page" id="accommodationpage">
+		<div data-role="header">
+			<a data-rel="back" data-icon="back" data-iconpos="notext"></a><!-- Back to Previous Page -->
+			<h1 class="ui-title" aria-level="1">Accommodation</h1>
+			<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div id=swipeHere data-role="content">
+				<h2 id="accommodationtitle">Accommodation</h2><!-- Image gallery -->
+				<div id="gallery" class="images"><!-- Some images taken from University of London website halls.london.ac.uk with permission from webmaster -->
+					<ul>
+						<li><div id="contentImage1"></div></li>
+						<li><div id="contentImage2"></div></li>
+						<li><div id="contentImage3"></div></li>
+						<li><div id="contentImage4"></div></li>
+					</ul>
+				</div>
+				<div><!-- Tap Buttons -->
+					<a class="lastImage" href="#">&#10094;</a>
+					<a class="nextImage" href="#">&#10095;</a>
+				</div>
+				<div data-role="collapsible-set"><!-- Collapsible Set -->
+					<div data-role="collapsible" data-collapsed="false"><!-- Collapsible Text -->
+						<h3>Features</h3>
+						<div id="contentFeatures"></div>
+					</div>
+					<div data-role="collapsible"><!-- Collapsible Text -->
+						<h3>Location</h3>
+							<div id="contentLocation"></div>
+					</div>
+					<div data-role="collapsible"><!-- Collapsible Text -->
+						<h3>Prices</h3>
+							<div id="contentPrices"></div>
+					</div>
+				</div>
+			<a id="mapbtn" data-role="button" data-icon="search">View on a Map</a>
+			<a href="#favouritePopup" data-role="button" data-icon="star" id="addbtn" data-rel="popup">Add to Favourites</a><!-- Adds to favourites and displays confirmation popup -->
+			<div data-role="popup" id="favouritePopup" data-theme="d" data-dismissible="false"  data-history="false" data-position-to="window">
+				<div data-role="header">
+					<h1>Added</h1>
+				</div>
+				<div data-role="content">
+					<a href="#" data-role="button" data-rel="back">Ok</a>
+				</div>
+			</div>
+			<a href="login.html" data-role="button" data-icon="action" id="resbtn">Reservation</a>
+			<div id="accommodationid"></div> <!-- Find a way to hide this / Put in a neat place-->
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-icon="info">About</a></li>
+					<li><a href="contact.html" data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head><!-- Head -->
+	<meta charset="utf-8">
+	<title>Accommodation</title>
+	<link href="images/zedlandsmall.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/zedland-custom.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />	
+	<link rel="stylesheet" href="styles/jquery.mobile-1.4.2.min.css"><!-- Links to CDN for scripts and CSS -->
+	<link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/config.js"></script>
+	<script src="scripts/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/accommodationmap.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="scripts/accommodationmap.js"></script><!-- Links to scripts -->
+	<script src="scripts/addaccommodation.js"></script>
+	<script src="scripts/getaccommodation.js"></script>
+	<script src="scripts/share.js"></script>
+	<script src="scripts/createaccommodationlist.js"></script> 
+	<script src="scripts/showaccommodation.js"></script>
+</head>
+<body><!-- Body  -->
+	<div data-role="page" id="about">
+		<div data-role="header">
+			<a href="index.html" data-icon="home">Home</a><!-- Back to Home Page -->
+				<h1 class="ui-title" aria-level="1">Accommodation</h1>
+				<img class="ZedlandLogo" src="images/zedlandbanner.png" alt="University of Zedland">  
+		</div>
+		<div data-role="main" class="ui-content">
+			<h2>About</h2>
+			<div data-role="collapsible-set"><!-- Collapsible Set -->
+				<div data-role="collapsible" data-collapsed="false"><!-- Collapsible Text -->
+					<h3>Accommodation Services</h3>
+					<p>Founded in 1988, Zedland university accommodation services have been helping thousands of students a year.</p>
+					<p>Our goal as an organisation is to ensure that all students can find affordable and accessible accomdation while studying at the Zedland university.</p>
+					<a href="http://www.zedlanduniversity.ac.zl" target="_blank">Zedland University Homepage</a><!-- Link to absolute external page -->
+				</div>
+				<div data-role="collapsible"><!-- Collapsible Text -->
+					<h3>Location</h3>
+					<p>The accommodation Services office can be found near the entrance to the Brunel building on the main campus:</p>
+					<p>Postal Address:</p>
+					<p>ZUAS,<br>
+					101 Brunel Building,<br>
+					Zedland University Main Campus,<br>
+					Capital City,<br>
+					Zedland,<br>
+					ZL7867H
+					</p>
+				</div>
+				<div data-role="collapsible"><!-- Collapsible Text -->
+					<h3>Opening Hours</h3>
+					<p>Monday - Friday: 9.00am - 6.00pm<br>
+					Saturday: 9.00am - 12.00pm<br>
+					Sunday: Closed</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"><!-- Added to stop footer from disapearing on tap -->
+			<div data-role="navbar" data-id="footernav"><!-- Footer Navigation -->
+				<ul>
+					<li><a href="about.html" data-icon="info">About</a></li>
+					<li><a href="contact.html" data-icon="mail">Contact</a></li>
+					<li><a href="login.html" data-icon="user">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</body>
+</html>
